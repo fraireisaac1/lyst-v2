@@ -7,12 +7,12 @@
     @vite(['resources/css/app.css', 'resourses/js/app.js'])
 
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-white shadow p-4">
+<body class="bg-blue-500">
+    <nav class="bg-[#0055ff] shadow p-4 text-white">
         <!-- Navbar content -->
          <h1 class="text-xl font-bold">My Task App</h1>
     </nav>
-    <main class="p-4">
+    <main class="inset-100 bg-gradient-to-br from-white via transparent to-blue p-4">
         @yield('content')
     </main>
 </body>
