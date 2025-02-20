@@ -109,15 +109,25 @@ class TaskController extends Controller
             'task_location' => 'nullable|string|max:255',
             'time_complexity' => 'required|integer|min:1|max:255',
             'materials_required' => 'nullable|string',
-            'deadline' => 'nullable|date'
+            'deadline' => 'nullable|date',
+            'priority' => 'nullable|integer|min:1|max:3',
+            'category' => 'nullable|string|max:255',
         ]);
+
+        $task = Task::findOrFail($id);
+        $task->update($validated);
+
+        return redirect()->route('tasks.index')->with('success', 'Task updated successfuly!');
     }
 
     /**
      * Remove the specified task.
      */
-    public function destroy(Task $task)
+    public function destroy(string $id)
     {
-        //
+        $task = Task::findOrFail($id);
+        $task->delete();
+
+        return redirect()->route('tasks.index')->with('success', 'Task deleted successfully!');
     }
 }
