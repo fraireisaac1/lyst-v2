@@ -43,7 +43,7 @@ class TaskController extends Controller
         }
         $tasks = $query->get();
 
-        return view('task.index', compact('tasks', 'search', 'sort'));
+        return view('tasks.index', compact('tasks', 'search', 'sort'));
 
         // Return a view (e.g., resources/views/tasks/index.blade.php)
         // with the tasks data
