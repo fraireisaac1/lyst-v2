@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+@section('content')
     <h1>Task Details</h1>
 
     <div>
@@ -35,3 +37,4 @@
         <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit Task</a>
         <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back to List</a>
     </div>
+@endofsection
