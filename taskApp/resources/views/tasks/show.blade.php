@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-@section('content')
-    <h1>Task Details</h1>
+    <h1 class="text-2xl font-bold mb-4">Task Details</h1>
 
     <div>
         <strong>Task Name:</strong> {{ $task->task_name }}
@@ -34,7 +32,7 @@
     </div>
 
     <div style="margin-top:20px">
-        <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit Task</a>
-        <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back to List</a>
+        <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400">Edit Task</a>
+        <a href="{{ route('tasks.index') }}" class="btn btn-secondary bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-400">Back to List</a>
     </div>
-@endofsection
+@endsection
