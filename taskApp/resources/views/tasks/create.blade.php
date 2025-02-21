@@ -7,17 +7,17 @@
     {{-- Task Name --}}
     <div class="mb-4">
         <label for="task_name" class="block mb-1">Task Name</label>
-        <input type="text" name="task_name" id="task_name" required class="w-full border rounded px-3 py-2">
+        <input type="text" name="task_name" id="task_name" required class="w-full border rounded px-3 py-2" pattern="^[a-bA-B0-9\s\s-_]{3,255}$" oninvalid="this.setCustomValidity('Please enter a valid task name')" oninput="this.setCustomValidity('')">
     </div>
     {{-- Task Location --}}
     <div class="mb-4">
         <label for="task_location" class="block mb-1">Location (Optional)</label>
-        <input type="text" name="task_location" id="task_location" class="w-full border rounded px-3 py-2">
+        <input type="text" name="task_location" id="task_location" class="w-full border rounded px-3 py-2" pattern="^[a-zA-Z0-9\s\-_,]{0,255}$">
     </div>
     {{-- Time Estimate (or Time Complexity) --}}
     <div class="mb-4">
         <label for="time_complexity" class="block mb-1">Time Estimate</label>
-        <select name="time_complexity" id="time_complexity" required class="w-full border rounded px-3 py-2">
+        <select name="time_complexity" id="time_complexity" required class="w-full border rounded px-3 py-2" pattern="^[a-zA-Z\s]{0,50}$">
             <option value="1">~10 minutes</option>
             <option value="2">~30 minutes</option>
             <option value="3">~1 hour</option>
