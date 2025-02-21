@@ -3,11 +3,11 @@
 @section('content')
 
 @section('content')
-	<h1 class="text-2xl font-semibold">All Tasks</h1>
+	<h1 class="text-2xl font-semibold text-center">All Tasks</h1>
 
 	<ul>
 		@forelse($tasks as $task)
-		<li class="mb-2">
+		<li class="mb-2 text-center">
 			{{ $task->task_name }}
 		</li>
 		@empty
