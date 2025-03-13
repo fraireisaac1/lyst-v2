@@ -32,13 +32,21 @@
 		</button>
 	</form>
 
-<ul>
+<ul class="grid grid-cols-2 gap-6 p-10">
 	@forelse($tasks as $task)
-		<li class="mb-2">
+		<li class="w-500 bg-gradient-to-br from-cyan-100 to-cyan-400 p-5 mb-4 text-xl border-4 border-teal-600 rounded-lg shadow-md hover:scale-105">
+			&#x2022
 			{{$task->task_name}}
+			<br>
+			<p class="text-sm">
+				-- {{ $task->task_location }} <br>
+				-- {{ $task->category }} <br>
+				-- {{ $task->deadline }} <br>
+				...
+			</p>
 		<!-- link to the show page-->
-			<a href="{{route('tasks.show', $task->id)}}" class="text-blue-500 underline ml-2">
-				View
+			<a href="{{route('tasks.show', $task->id)}}" class="text-blue-500 hover:text-blue-700 ml-2">
+				Details
 			</a>
 
 		</li>
