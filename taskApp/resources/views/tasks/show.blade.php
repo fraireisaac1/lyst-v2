@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="p-6 leading-10 text-xl">
     <h1 class="text-2xl font-bold mb-4">Task Details</h1>
 
     <div>
@@ -35,4 +36,5 @@
         <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400">Edit Task</a>
         <a href="{{ route('tasks.index') }}" class="btn btn-secondary bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-400">Back to List</a>
     </div>
+</div>
 @endsection

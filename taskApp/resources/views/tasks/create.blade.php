@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-    <div class="max-w-2xl mx-auto p-4">
+    <div class="min-w-2xl max-w-10xl mx-auto p-8">
     <h1 class="text-2xl font-bold mb-4">Create New Task</h1>
-    <form action="{{ route('tasks.store') }}" method="POST">
+    <form action="{{ route('tasks.store') }}" method="POST" class="grid grid-cols-2 gap-6">
     @csrf
     {{-- Task Name --}}
     <div class="mb-4">
@@ -51,9 +51,9 @@
         <input type="text" name="category" id="category" class="w-full border rounded px-3 py-2" placeholder="e.g., chores, work, health">
     </div>
     {{-- Submit and Cancel Buttons --}}
-    <div class="flex gap-4">
+    <div class="grid gap-4">
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Create Task</button>
-        <a href="{{ url('/') }}" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancel</a>
+        <a href="{{ url('/') }}" class="bg-gray-500 text-white px-4 py-2 rounded text-center hover:bg-gray-600">Cancel</a>
     </div>
     </form>
     </div>

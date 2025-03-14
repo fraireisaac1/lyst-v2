@@ -32,6 +32,15 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        Schema::create('names', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('first_name');
+            $table->string('last_name')->nullable();
+            $table->string('aka')->nullable();
+            $table->dateTime('birth_date')->nullable();
+            $table->string('attributes')->nullable();
+        });
     }
 
     /**
@@ -40,5 +49,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('tasks');
+        Schema::dropIfExists('names');
     }
 };
